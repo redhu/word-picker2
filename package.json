@@ -1,0 +1,11 @@
+{
+  "name": "word-picker",
+  "version": "1.0.8",
+  "description": "文本分词，中文分词，大文本分词，支持第三方词库，效率高",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "redhu",
+  "license": "ISC"
+}
