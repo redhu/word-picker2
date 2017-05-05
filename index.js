@@ -2,6 +2,5 @@
  * creat
  * @type {Function}
  */
-var Picker = require('./lib/Picker');
 
-module.exports = new Picker();
+module.exports = require('./lib/Picker');
