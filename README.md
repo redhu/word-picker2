@@ -1,7 +1,7 @@
 ## 特性
 * 使用方便，一个方法搞定分词
 * 效率非常高，文本长短不是问题
-* 支持第三方词库，例如[搜狗词库](http://pinyin.sogou.com/dict/download_txt.php?id=11640),您只需要下载后放到%picker-word%/word目录下即可
+* 支持第三方词库，例如[搜狗词库](http://pinyin.sogou.com/dict/download_txt.php?id=11640),您只需要下载后放到利用接口导入即可
 * 如有疑问，请email至gzhmj@foxmail.com
 
 ## 安装:
