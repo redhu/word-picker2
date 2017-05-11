@@ -1,6 +1,6 @@
 {
-  "name": "word-picker",
-  "version": "1.0.8",
+  "name": "word-picker2",
+  "version": "1.1.0",
   "description": "文本分词，中文分词，大文本分词，支持第三方词库，效率高",
   "main": "index.js",
   "scripts": {
@@ -10,5 +10,20 @@
   "license": "ISC",
   "dependencies": {
     "underscore": "^1.8.3"
-  }
+  },
+  "directories": {
+    "example": "example"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redhu/word-picker2.git"
+  },
+  "keywords": [
+    "word-picker"
+  ],
+  "bugs": {
+    "url": "https://github.com/redhu/word-picker2/issues"
+  },
+  "homepage": "https://github.com/redhu/word-picker2#readme"
 }
