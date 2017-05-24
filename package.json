@@ -1,6 +1,6 @@
 {
   "name": "word-picker2",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "文本分词，中文分词，大文本分词，支持第三方词库，效率高",
   "main": "index.js",
   "scripts": {
