@@ -9,13 +9,46 @@ var picker = new Picker({
   wordMaxLen: 10
 })
 
+var article = require('fs').readFileSync('./ai.txt').toString()
+var ret = ''
+
 picker.addLib('../word/common.txt')
-picker.addLib(['这段感情', '瞒着我'])
+ret = picker.doPicker(article)
+console.log('分词结果', ret)
+console.log('=================================')
 
-var ret = picker.doPicker('其实她瞒着我也是可以理解的，可能她觉得这段感情还八字没一撇呢，没到通知我的时候。我那时就跟她说，去山里有些远了，在城里怎么玩都行，当爹的只能说这样的话了。')
-console.log(ret)
+picker.addLib(['互联网%公司'])
+ret = picker.doPicker(article)
+console.log('分词结果', ret)
+console.log('=================================')
+
+picker.reloadLib(['开发者%互联网'])
+ret = picker.doPicker('开发者_互联网公司')
+console.log('分词结果', ret)
+console.log('=================================')
+
+picker.addLib('../word/网络术语.txt')
+picker.addLib('../word/common.txt')
+// 运行一千次
+var d1 = new Date()
+var times = 1000
+for(var i = 0; i < times; i++){
+  ret = picker.doPicker(article)
+}
+var d2 = new Date()
+console.log('运行长文本' + times + '次', '费时：', d2 - d1, 'ms')
+console.log('=================================')
+
+// 运行一千次短文本
+var d1 = new Date()
+var times = 1000
+for(var i = 0; i < times; i++){
+  ret = picker.doPicker('作为一个互联网公司开发者,我认为远程办公是一个必备技能')
+}
+var d2 = new Date()
+console.log('运行短文本' + times + '次', '费时：', d2 - d1, 'ms')
+console.log('=================================')
 
 
-picker.reloadLib(['其实', '理解', '万岁', '理解万岁'])
-ret = picker.doPicker('其实她瞒着我也是可以理解的，可能她觉得这段感情还八字没一撇呢，没到通知我的时候。我那时就跟她说，去山里有些远了，在城里怎么玩都行，当爹的只能说这样的话了。')
-console.log(ret)
+console.info('success!')
+
